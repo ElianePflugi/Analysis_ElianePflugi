@@ -39,5 +39,17 @@ cor(data2$words_hit_SD, data2[,c("words_hit_IR", "D2_KL_Tag1", "mac_2b_s1", "iap
 t.test(data2$Tes_A1 ~ data2$Sex)
 
 
+#12 calculate the mean performance in tests e.g. d2
+####requires calculating the mean of rows
+####requires asking google for help
+?rowMeans()
 
+#mean value of d2 from two different days
+data2$D2_mean <- rowMeans(data2[,c("D2_KL_Tag1", "D2_KL_Tag2")])
+
+#mean recalled words from two different time spans
+data2$words_mean <- rowMeans(data2[,c("words_hit_IR", "words_hit_SD")])
+
+#mean of episodic memory performance on two different days
+data2$iaps_hit_SD_mean <- rowMeans(data2[,c("iaps_hit_SD_day1", "iaps_hit_SD_day2")])
 
