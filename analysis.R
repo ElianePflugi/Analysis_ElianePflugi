@@ -28,6 +28,10 @@ cor.test(data2$D2_KL_Tag1, data2$D2_KL_Tag2)
 
 #10
 cor(data2$words_hit_IR, data2[,c("words_hit_SD", "D2_KL_Tag1", "mac_2b_s1", "iaps_hit_SD_day1", "mrt_0b_s1", "pos1_ar_mean")], use="pairwise")
+#the correlation with attention is higher than the correlation with memory
+
+cor(data2$words_hit_SD, data2[,c("words_hit_IR", "D2_KL_Tag1", "mac_2b_s1", "iaps_hit_SD_day1", "mrt_0b_s1", "pos1_ar_mean")], use="pairwise")
+#the correlation with attention is lower than the correlation with memory
 
 
 
