@@ -53,3 +53,9 @@ data2$words_mean <- rowMeans(data2[,c("words_hit_IR", "words_hit_SD")])
 #mean of episodic memory performance on two different days
 data2$iaps_hit_SD_mean <- rowMeans(data2[,c("iaps_hit_SD_day1", "iaps_hit_SD_day2")])
 
+#running statistical analysis with regards to my hypothesis
+####Hypothesis 1: there is a gender difference in the working memory performance in favor of women
+t.test(data2$iaps_hit_SD_mean ~ data2$Sex)
+
+####Hypothesis 2: there is a gender difference in the recollection of words in favor of women
+t.test(data2$words_mean ~data2$sex)
