@@ -1,0 +1,57 @@
+data <- read.table ("~/Desktop/Gittest/Analysis_ElianePflugi/Verhaltensdaten.txt", sep = ";", header = "TRUE")
+data <- read.table ("~/Desktop/Gittest/Analysis_ElianePflugi/Verhaltensdaten.txt", sep = ";")
+data
+data <- read.table ("~/Desktop/Gittest/Analysis_ElianePflugi/Verhaltensdaten.txt", sep = "\t ")
+data <- read.table ("~/Desktop/Gittest/Analysis_ElianePflugi/Verhaltensdaten.txt", sep = ";")
+data <- read.table ("~/Desktop/Gittest/Analysis_ElianePflugi/Verhaltensdaten.txt", sep = ",")
+data
+data <- read.table ("~/Desktop/Gittest/Analysis_ElianePflugi/Verhaltensdaten.txt", sep="\t", header = TRUE)
+data
+data <- read.table ("~/Desktop/Gittest/Analysis_ElianePflugi/Verhaltensdaten.txt", sep="\t", header = TRUE)
+count(data)
+library(dplyr)
+library(data.table)
+count(data)
+data2 <- data [!(data$subject_filter=="remove"),]
+count(data2)
+DL_KL_Tag1 <- data2$DL_KL_Tag1
+DL_KL_Tag1
+DL_KL_Tag1 <- data2$DL_KL_Tag1
+DL_KL_Tag1
+d2_KL_Tag1 <- data2$DL_KL_Tag1
+d2_KL_Tag1
+data2
+d2_KL_Tag1 <- data2$D2_KL_Tag1
+d2_KL_Tag1
+d2_KL_Tag2 <- data$D2_KL_Tag2
+d2_KL_Tag2
+d2_KL_Tag1 <- data2$D2_KL_Tag1
+d2_KL_Tag1
+d2_KL_Tag2 <- data$D2_KL_Tag2
+d2_KL_Tag2
+cor(data2$d2_KL_Tag1, data$d2_KL_Tag2)
+cor(data2$d2_KL_Tag1, data2$d2_KL_Tag2)
+cor(data2$D2_KL_Tag1, data2$D2_KL_Tag2, method="spearman")
+cor(data2$D2_KL_Tag1, data2$D2_KL_Tag2)
+cor(d2_KL_Tag1, d2_KL_Tag2)
+?cor()
+c1 <-cor(data2$Tes_A1, data2$Tes_B1)
+c1
+c1 <-cor(data2$Tes_A1, data2$Tes_B1,  use="pairwise")
+c1 <-cor(data2$Tes_A1, data2$Tes_B1,  use="pairwise")
+c1
+cor.test(data2$Tes_A1, data2$Tes_B1)
+cor(data2$words_hit_IR, data2[,c("words_hit_SD", "D2_KL_Tag1", "mac_2b_s1", "iaps_hit_SD_day1", "mrt_0b_s1", "pos1_ar_mean")], use="pairwise")
+data2$words_mean <- rowMeans(data2[,c("words_hit_IR", "words_hit_SD")])
+d2_KL_Tag1 <- data2$D2_KL_Tag1
+d2_KL_Tag2 <- data$D2_KL_Tag2
+c2 <- cor(data2$D2_KL_Tag1, data2$D2_KL_Tag2, use="pairwise")
+c2
+cor.test(data2$D2_KL_Tag1, data2$D2_KL_Tag2)
+cor(data2$words_hit_SD, data2[,c("words_hit_IR", "D2_KL_Tag1", "mac_2b_s1", "iaps_hit_SD_day1", "mrt_0b_s1", "pos1_ar_mean")], use="pairwise")
+?t.test()
+?mean()
+?rowMean()
+?rowMean()
+?rowMeans()
+data2$D2_mean <- mean(data2$D2_KL_Tag1, data2$D2_KL_Tag)
